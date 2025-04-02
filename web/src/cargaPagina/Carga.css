@@ -14,7 +14,7 @@
 }
 
 svg{
-    width: 40%;
+    width: 100%;
 }
 
 .row3{
@@ -23,3 +23,18 @@ svg{
     border: 1px solid black;
 
 }
+
+.carga-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-color: white;
+  }
+  
+  .carga-svg {
+    width: 80%; /* Make it responsive */
+    max-width: 600px; /* Limit maximum size */
+  }
+  
