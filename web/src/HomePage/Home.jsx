@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "../HomePage/Home.css"
 
 const Home = ({ onLoaded }) => {
   useEffect(() => {
@@ -9,10 +10,15 @@ const Home = ({ onLoaded }) => {
   }, [onLoaded]);
 
   return (
-    <div>
-      <h1>Bienvenido a Home</h1>
-      <p>Todos los componentes han cargado correctamente.</p>
-    </div>
+    <div className="container-fluid">
+      <div className="navbar"></div>
+        <div className="element1"></div>
+        <div className="element2"></div>
+        <div className="element3"></div>
+        <div className="element4"></div>
+        <div className="element5"></div>
+      </div>
+
   );
 };
 

@@ -3,40 +3,58 @@ import gsap from "gsap";
 import "../cargaPagina/Carga.css";
 import { useGSAP } from "@gsap/react";
 
-export const Carga = ({ onComplete }) => {
+export const CargaPagina = ({ onComplete }) => {
   const svgRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useGSAP(() => {
+  // Función que ejecuta la animación y la repite si la página no está cargada
+  const runAnimation = () => {
+    const paths = svgRef.current.querySelectorAll("path, polygon");
     let tl = gsap.timeline({
-      onComplete: () => setTimeout(() => setIsLoading(false), 500), // Pequeño retraso antes de ocultar
+      onComplete: () => {
+        if (isLoading) {
+          // Si la página sigue cargando, reinicia la animación
+          setTimeout(runAnimation); // Reinicia la animación después de 1 segundo
+        } else {
+          setIsLoading(false); // Finaliza cuando la página ha cargado
+        }
+      },
     });
 
-    const paths = svgRef.current.querySelectorAll("path, polygon");
-
+    // Configura el estado inicial de la animación
     paths.forEach((path) => {
       const length = path.getTotalLength();
       gsap.set(path, { strokeDasharray: length, strokeDashoffset: length });
     });
 
+    // Anima cada uno de los paths
     paths.forEach((path) => {
       tl.to(path, {
         strokeDashoffset: 0,
-        duration: 1.8,
+        duration: 1.5,
         ease: "power2.out",
       });
     });
 
+    // Cambia el color de relleno de los paths
     tl.to(paths, { fill: "#231f20", duration: 1 }, "+=0.5");
-  }, []);
+
+    tl.to(paths, { opacity: 0 }, "+=0.5");
+  };
 
   useEffect(() => {
+    runAnimation(); // Inicia la animación cuando el componente se monta
+  }, []);
+
+  // Llama a onComplete cuando se complete la animación y la carga
+  useEffect(() => {
     if (!isLoading) {
-      onComplete(); // Llamamos a la función cuando la carga termina
+      onComplete(); // Llamamos a la función cuando la animación termina
     }
   }, [isLoading, onComplete]);
 
-  if (!isLoading) return null; // Si ya cargó, ocultamos el componente
+  // Si la animación ya terminó, no mostramos el componente
+  if (!isLoading) return null;
 
   return (
     <div className="carga-container">
@@ -79,3 +97,5 @@ export const Carga = ({ onComplete }) => {
     </div>
   );
 };
+
+export default CargaPagina;
