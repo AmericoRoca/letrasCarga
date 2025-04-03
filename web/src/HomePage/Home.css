@@ -1,42 +1,44 @@
 
+.container{
+    display: grid;
+}
+
 .navbar {
     background-color: red;
-    width: 50px;
-    height: 800px;
+    height: 100vh;
     border: 1px solid black;
+}
+
+.element{
+    border-radius: 50px;
 }
 
 .element1{
     background-color: green;
-    width: 20px;
-    height: 3px;
+    height: 20vw;
     border: 1px solid black;
 }
 
 .element2{
     background-color: blue;
-    width: 20px;
-    height: 30px;
+    height: 20vw;
     border: 1px solid black;
 }
 
 .element3{
     background-color: black;
-    width: 20px;
-    height: 30px;
+    height: 20vw;
     border: 1px solid black;
 }
 
 .element4{
     background-color: pink;
-    width: 20px;
-    height: 30px;
+    height: 20vw;
     border: 1px solid black;
 }
 
 .element5{
     background-color: orange;
-    width: 20px;
-    height: 30px;
+    height: 20vw;
     border: 1px solid black;
 }
