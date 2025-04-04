@@ -1,35 +1,45 @@
 import React, { useEffect } from "react";
 import "../HomePage/Home.css"
+import { About } from "../About/About";
+import { Services } from "../Services/Services";
+import { Portfolio } from "../Portfolio/Portfolio";
+import { Contact } from "../Contact/Contact";
+import { Navbar } from "../Navbar/Navbar";
+import { Stack } from "../Stack/Stack.jsx";
 
-const Home = ({ onLoaded }) => {
-  useEffect(() => {
-    // Simula la carga de componentes internos en Home
-    setTimeout(() => {
-      onLoaded(); // Avisamos a App.js que Home ya cargó
-    }, 2000);
-  }, [onLoaded]);
+const Home = ({  }) => {
 
   return (
     <div className="container-fluid">
     <div className="row w-100 h-100">
-      {/* Navbar ocupa toda la pantalla en desktop, pero en móvil se apila arriba */}
-      <div className="navbar col-12 col-md-2 bg-primary text-white text-center py-3">
-        Navbar
+
+      <div className="navbar col-12 col-sm-1">
+        <Navbar/>
       </div>
   
-      {/* Contenedor de los demás elementos */}
+
       <div className="col-12 col-md-10 d-flex flex-column">
-        <div className="row flex-grow-1">
-          {/* Elemento 1 y 2 se apilan en móvil y ocupan 6 columnas en desktop */}
-          <div className="col-12 col-md-6 bg-success text-white p-3">Elemento 1</div>
-          <div className="col-12 col-md-6 bg-danger text-white p-3">Elemento 2</div>
+        <div className="row flex-grow-1 p-3">
+
+          <div className="col-12 col-md-8 p-2">
+            <About/>
+          </div>
+          <div className="col-12 col-md-4 p-2">
+            <Services/>
+          </div>
         </div>
   
-        <div className="row flex-grow-1">
-          {/* Elementos 3, 4 y 5 se apilan en móvil y ocupan 4 columnas en desktop */}
-          <div className="col-12 col-md-4 bg-warning text-dark p-3">Elemento 3</div>
-          <div className="col-12 col-md-4 bg-info text-white p-3">Elemento 4</div>
-          <div className="col-12 col-md-4 bg-secondary text-white p-3">Elemento 5</div>
+        <div className="row flex-grow-1 p-2">
+
+          <div className="col-12 col-md-6 p-2">
+            <Portfolio/>
+          </div>
+          <div className="col-12 col-md-3 p-2">
+            <Stack/>
+          </div>
+          <div className="col-12 col-md-3  p-2">
+            <Contact/>
+          </div>
         </div>
       </div>
     </div>

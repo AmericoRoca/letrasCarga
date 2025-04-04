@@ -1,44 +1,11 @@
 
-.container{
+.container-fluid{
     display: grid;
+    background-color: black;
 }
 
 .navbar {
-    background-color: red;
+    width: 100px;
     height: 100vh;
-    border: 1px solid black;
-}
-
-.element{
-    border-radius: 50px;
-}
-
-.element1{
-    background-color: green;
-    height: 20vw;
-    border: 1px solid black;
-}
-
-.element2{
-    background-color: blue;
-    height: 20vw;
-    border: 1px solid black;
-}
-
-.element3{
-    background-color: black;
-    height: 20vw;
-    border: 1px solid black;
-}
-
-.element4{
-    background-color: pink;
-    height: 20vw;
-    border: 1px solid black;
-}
-
-.element5{
-    background-color: orange;
-    height: 20vw;
     border: 1px solid black;
 }

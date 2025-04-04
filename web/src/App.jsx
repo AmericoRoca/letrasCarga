@@ -3,16 +3,19 @@ import CargaPagina from "./cargaPagina/CargaPagina.jsx"; // Asegúrate de usar e
 import Home from "./HomePage/Home.jsx";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 10000); // Simula un retardo de carga de 3 segundos
+    // Simula carga de datos o componentes (ejemplo: API, imágenes)
+    setTimeout(() => {
+      setIsReady(true); // Marca que todo está listo
+    }, 9000); // Simulación de carga de 3 segundos
   }, []);
 
   return (
     <>
-      {loading && <CargaPagina onComplete={() => setLoading(false)} />} 
-      {!loading && <Home />} 
+      <CargaPagina isReady={isReady} onComplete={() => setLoading(false)} />
+       <Home />
     </>
   );
 }
