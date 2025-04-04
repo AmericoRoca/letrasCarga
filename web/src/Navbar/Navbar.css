@@ -1,5 +1,8 @@
-.caja{
-    border: 1px solid white;
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px; 
+  min-height: 100vh; 
 }
 
 
@@ -8,3 +11,10 @@
     height: 5%;
     align-items: center;
 }
+
+.caja {
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: 1 es más pequeña, 2 es más grande */
+    gap: 20px; /* Espacio entre las columnas */
+  }
