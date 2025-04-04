@@ -1,20 +1,36 @@
 .navbar {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px; 
-  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.logo{
+  padding-left: 1rem;
 
-.logo-navbar{
-    width: 100%;
-    height: 5%;
-    align-items: center;
+}
+.div-ul ul {
+  padding-left: 0;
 }
 
-.caja {
-    border: 1px solid white;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: 1 es más pequeña, 2 es más grande */
-    gap: 20px; /* Espacio entre las columnas */
-  }
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* espacio entre ítems */
+  padding: 0 auto !important;
+}
+
+.navbar li {
+  color: white;
+  list-style: none;
+}
+
+li{
+  cursor: pointer;
+}
+
+li:hover{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
