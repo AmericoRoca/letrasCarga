@@ -5,7 +5,7 @@
 }
 
 .logo{
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 
 }
 .div-ul ul {
@@ -22,15 +22,26 @@
 .navbar li {
   color: white;
   list-style: none;
+  width: 50px; 
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-li{
-  cursor: pointer;
-}
-
-li:hover{
+li:hover {
   background-color: white;
   width: 50px;
   height: 50px;
   border-radius: 5px;
+
+}
+
+li:hover .icon {
+  color: black !important; 
+}
+
+
+.py-4{
+  padding-bottom: 8.5rem !important;
 }

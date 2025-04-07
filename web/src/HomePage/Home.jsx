@@ -10,40 +10,37 @@ import { Stack } from "../Stack/Stack.jsx";
 const Home = ({  }) => {
 
   return (
-    <div className="container-fluid">
-    <div className="row w-100 h-100">
+    <div className="container-fluid w-100 h-100">
+  <div className="row w-100 h-100">
+    <div className="col-12 col-md-1">
+      <Navbar />
+    </div>
 
-      <div className="navbar col-12 col-sm-1">
-        <Navbar/>
-      </div>
-  
-
-      <div className="col-12 col-md-10 d-flex flex-column">
-        <div className="row flex-grow-1 p-3">
-
-          <div className="col-12 col-md-8 p-2">
-            <About/>
-          </div>
-          <div className="col-12 col-md-4 p-2">
-            <Services/>
-          </div>
+    <div className="col-12 col-md-11 d-flex flex-column">
+      <div className="row flex-grow-1 p-2">
+        <div className="col-12 col-md-8 p-2">
+          <About />
         </div>
-  
-        <div className="row flex-grow-1 p-2">
+        <div className="col-12 col-md-4 p-2">
+          <Services />
+        </div>
+      </div>
 
-          <div className="col-12 col-md-6 p-2">
-            <Portfolio/>
-          </div>
-          <div className="col-12 col-md-3 p-2">
-            <Stack/>
-          </div>
-          <div className="col-12 col-md-3  p-2">
-            <Contact/>
-          </div>
+      <div className="row flex-grow-1 p-2">
+        <div className="col-12 col-md-6 p-2">
+          <Portfolio />
+        </div>
+        <div className="col-12 col-md-3 p-2">
+          <Stack />
+        </div>
+        <div className="col-12 col-md-3 p-2">
+          <Contact />
         </div>
       </div>
     </div>
   </div>
+</div>
+
   
 
            

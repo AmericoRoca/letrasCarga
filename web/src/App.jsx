@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,  } from "react";
 import CargaPagina from "./cargaPagina/CargaPagina.jsx"; // Asegúrate de usar el nombre correcto
 import Home from "./HomePage/Home.jsx";
+
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   const [isReady, setIsReady] = useState(false);
@@ -15,7 +18,10 @@ function App() {
   return (
     <>
       <CargaPagina isReady={isReady} onComplete={() => setLoading(false)} />
-       <Home />
+        <Router>       
+          <Home />
+          
+        </Router>
     </>
   );
 }
