@@ -1,5 +1,6 @@
 import React from 'react'
 import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from 'lucide-react'
+
 export const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-black w-full">
@@ -24,7 +25,7 @@ export const Contact = () => {
                     href="mailto:hello@example.com"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    hello@example.com
+                    americoroca@code.com
                   </a>
                 </div>
               </div>
@@ -35,10 +36,10 @@ export const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold">Phone</h3>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+34744729453"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    +1 (234) 567-890
+                    +34 744729453
                   </a>
                 </div>
               </div>
@@ -48,7 +49,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Location</h3>
-                  <p className="text-gray-400">San Francisco, California</p>
+                  <p className="text-gray-400">Cádiz, Spain</p>
                 </div>
               </div>
             </div>

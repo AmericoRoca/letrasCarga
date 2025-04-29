@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { ChevronDownIcon } from 'lucide-react'
-import { ThreeScene } from './ThreeScene'
+import { ThreeScene } from '../ThreeScene'
 export const Hero = () => {
   return (
     <section

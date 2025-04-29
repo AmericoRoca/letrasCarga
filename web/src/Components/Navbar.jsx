@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MenuIcon, XIcon } from 'lucide-react'
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)

@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import "../cargaPagina/Carga.css";
-import { useGSAP } from "@gsap/react";
 
 const CargaPagina = ({ isReady, onComplete }) => {
   const svgRef = useRef(null);
