@@ -45,7 +45,7 @@ export const Projects = () => {
             creating innovative digital solutions.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -58,7 +58,7 @@ export const Projects = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="!p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4 flex-grow">
                   {project.description}
@@ -98,7 +98,7 @@ export const Projects = () => {
         <div className="mt-12 text-center">
           <a
             href="#"
-            className="px-8 py-3 border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors inline-flex"
+            className="!px-10 py-3 border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors inline-flex"
           >
             View All Projects
           </a>

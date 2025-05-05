@@ -14,7 +14,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="!py-20 bg-black w-full">
       <div className="container mx-auto px-6">
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center !py-8">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach

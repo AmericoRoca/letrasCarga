@@ -68,7 +68,7 @@ export const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-black p-8 rounded-lg border border-zinc-800 hover:border-white/30 transition-all duration-300"
+              className="bg-black !p-8 rounded-lg border border-zinc-800 hover:border-white/30 transition-all duration-300"
             >
               <div className="mb-4 text-gray-300">{skill.icon}</div>
               <h3 className="text-xl font-bold mb-3">{skill.title}</h3>
