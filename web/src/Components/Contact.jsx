@@ -38,8 +38,8 @@ export const Contact = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-zinc-900 rounded-md py-4">
+              <div className="flex items-start gap-4 py-4">
+                <div className="p-3 bg-zinc-900 rounded-md">
                   <PhoneIcon size={24} className="text-gray-300" />
                 </div>
                 <div>
@@ -146,7 +146,7 @@ export const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="px-6 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors flex items-center gap-2"
+                className="!px-8 py-3 bg-white text-black font-medium !rounded-md hover:bg-gray-200 transition-colors flex items-center gap-2"
               >
                 Send Message <SendIcon size={16} />
               </button>
