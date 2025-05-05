@@ -2,6 +2,15 @@ import React from "react";
 import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from "lucide-react";
 
 export const Contact = () => {
+
+  const socialLinks = {
+    github: "https://github.com/AmericoRoca",
+    linkedin: "https://www.linkedin.com/in/americoroca/?locale=en_US",
+    threads: "https://www.threads.net/@americo.roca", // Threads usa .net, no .com
+  };
+
+
+
   return (
     <section id="contact" className="py-20 bg-black w-full">
       <div className="container mx-auto px-6">
@@ -59,7 +68,9 @@ export const Contact = () => {
                 {["github", "linkedin", "threads"].map((platform) => (
                   <a
                     key={platform}
-                    href="#"
+                    href={socialLinks[platform]}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 bg-zinc-900 rounded-md hover:bg-zinc-800 transition-colors"
                     aria-label={`Connect on ${platform}`}
                   >
