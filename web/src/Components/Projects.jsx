@@ -3,7 +3,7 @@ import { ExternalLinkIcon, GithubIcon } from 'lucide-react'
 export const Projects = () => {
   const projects = [
     {
-      title: '3D Portfolio Website',
+      title: 'Statics Websites',
       description:
         'A personal portfolio showcasing my work with interactive 3D elements using Three.js and React.',
       image:
@@ -13,7 +13,17 @@ export const Projects = () => {
       githubUrl: '#',
     },
     {
-      title: 'E-commerce Dashboard',
+      title: '3D Websites',
+      description:
+        'A personal portfolio showcasing my work with interactive 3D elements using Three.js and React.',
+      image:
+        'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80',
+      tags: ['React', 'Three.js', 'Tailwind CSS'],
+      liveUrl: '#',
+      githubUrl: '#',
+    },
+    {
+      title: 'E-commerce',
       description:
         'A comprehensive admin dashboard for managing products, orders, and customers with real-time analytics.',
       image:
@@ -23,7 +33,7 @@ export const Projects = () => {
       githubUrl: '#',
     },
     {
-      title: 'AI Content Generator',
+      title: 'Custom Web Application',
       description:
         'A tool that leverages machine learning to generate high-quality content for various purposes.',
       image:
@@ -45,7 +55,7 @@ export const Projects = () => {
             creating innovative digital solutions.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 py-4">
           {projects.map((project, index) => (
             <div
               key={index}
