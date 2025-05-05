@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MenuIcon, XIcon } from 'lucide-react'
-import {LogoSvg} from "../../src/assets/img/logo/LogoSvg"
+import Logo from "../logo/logo"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +22,7 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="text-1xl font-bold tracking-tighter">
-          <LogoSvg />
+          <Logo />
         </div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">

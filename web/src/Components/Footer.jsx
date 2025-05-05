@@ -1,15 +1,15 @@
 import React from 'react'
-import {LogoSvg} from "../../src/assets/img/logo/LogoSvg"
+import Logo from "../logo/logo"
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
-    <footer className="py-12 bg-zinc-950 w-full">
+    <footer className="!py-12 bg-zinc-950 w-full">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold tracking-tighter">
-              <LogoSvg/>
+              <Logo/>
             </div>
           </div>
           <div className="flex gap-8 mb-6 md:mb-0">
