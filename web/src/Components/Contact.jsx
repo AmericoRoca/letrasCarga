@@ -24,7 +24,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 py-4">
                 <div className="p-3 bg-zinc-900 rounded-md">
                   <MailIcon size={24} className="text-gray-300" />
                 </div>
@@ -39,7 +39,7 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-zinc-900 rounded-md">
+                <div className="p-3 bg-zinc-900 rounded-md py-4">
                   <PhoneIcon size={24} className="text-gray-300" />
                 </div>
                 <div>
@@ -52,7 +52,7 @@ export const Contact = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 py-4">
                 <div className="p-3 bg-zinc-900 rounded-md">
                   <MapPinIcon size={24} className="text-gray-300" />
                 </div>
