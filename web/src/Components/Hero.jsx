@@ -27,7 +27,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#projects"
-              className="px-8 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors"
+              className="px-12 py-3 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition-colors"
             >
               View My Work
             </a>

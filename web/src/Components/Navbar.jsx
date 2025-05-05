@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MenuIcon, XIcon } from 'lucide-react'
+import {LogoSvg} from "../../src/assets/img/logo/LogoSvg"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,9 +21,8 @@ export const Navbar = () => {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/90 backdrop-blur-sm py-4' : 'bg-transparent py-6'}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="text-2xl font-bold tracking-tighter">
-          <span className="text-white">DEV</span>
-          <span className="text-gray-400">PORTFOLIO</span>
+        <div className="text-1xl font-bold tracking-tighter">
+          <LogoSvg />
         </div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -30,7 +30,7 @@ export const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-white transition-colors"
+              className="text-gray-300 hover:text-white transition-colors px-4 py-4"
             >
               {item}
             </a>

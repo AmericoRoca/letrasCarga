@@ -1,5 +1,5 @@
-import React from 'react'
-import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from 'lucide-react'
+import React from "react";
+import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -56,22 +56,20 @@ export const Contact = () => {
             <div className="mt-12">
               <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
-                {['github', 'linkedin', 'twitter', 'dribbble'].map(
-                  (platform) => (
-                    <a
-                      key={platform}
-                      href="#"
-                      className="p-3 bg-zinc-900 rounded-md hover:bg-zinc-800 transition-colors"
-                      aria-label={`Connect on ${platform}`}
-                    >
-                      <img
-                        src={`https://cdn.simpleicons.org/${platform}/ffffff`}
-                        alt={platform}
-                        className="w-5 h-5"
-                      />
-                    </a>
-                  ),
-                )}
+                {["github", "linkedin", "threads"].map((platform) => (
+                  <a
+                    key={platform}
+                    href="#"
+                    className="p-3 bg-zinc-900 rounded-md hover:bg-zinc-800 transition-colors"
+                    aria-label={`Connect on ${platform}`}
+                  >
+                    <img
+                      src={`https://api.iconify.design/simple-icons:${platform}.svg?color=ffffff`}
+                      alt={platform}
+                      className="w-5 h-5"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -146,5 +144,5 @@ export const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

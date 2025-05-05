@@ -1,5 +1,5 @@
-import React from 'react'
-import { BriefcaseIcon, GraduationCapIcon, AwardIcon } from 'lucide-react'
+import React from "react";
+import { BriefcaseIcon, GraduationCapIcon, AwardIcon } from "lucide-react";
 export const About = () => {
   return (
     <section id="about" className="py-20 bg-zinc-900 w-full">
@@ -8,18 +8,25 @@ export const About = () => {
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">About Me</h2>
             <p className="text-gray-300 mb-6 text-lg">
-              I'm a passionate developer with a strong focus on creating
-              immersive digital experiences that combine aesthetic design with
-              technical excellence. With expertise in both frontend and backend
-              technologies, I enjoy building complete solutions that solve
-              real-world problems.
+              I am a passionate Fullstack Developer with hands-on experience in
+              creating dynamic, high-performance web applications using
+              frameworks like React, and Laravel. I have a strong foundation in
+              both frontend and backend technologies, coupled with expertise in
+              managing relational (SQL) and non-relational (NoSQL) databases. My
+              proficiency with version control systems like GIT ensures smooth
+              collaboration and efficient project management.
             </p>
             <p className="text-gray-400 mb-8">
-              My journey in software development began over 5 years ago, and
-              since then I've worked on a diverse range of projects from
-              interactive web applications to complex enterprise systems. I'm
-              constantly exploring new technologies and approaches to enhance my
-              skills and deliver better results.
+              I thrive in fast-paced environments where I can continuously learn
+              and push my limits. Whether working independently or as part of a
+              team, I embrace agile methodologies to deliver high-quality,
+              scalable solutions. My education is a blend of formal academic
+              training and self-taught skills, driven by my deep curiosity and
+              desire to improve constantly. I'm eager to contribute to
+              innovative projects and am always looking to learn new
+              technologies and approaches. I’m excited to take on new
+              challenges, grow as a developer, and bring my best to every
+              project.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -64,7 +71,7 @@ export const About = () => {
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-zinc-800 to-black rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80"
+                src="../src/assets/img/Fotoperfil.png"
                 alt="Developer Portrait"
                 className="w-full h-full object-cover mix-blend-luminosity opacity-80"
               />
@@ -81,5 +88,5 @@ export const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

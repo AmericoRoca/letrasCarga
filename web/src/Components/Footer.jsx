@@ -1,4 +1,6 @@
 import React from 'react'
+import {LogoSvg} from "../../src/assets/img/logo/LogoSvg"
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
@@ -7,8 +9,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold tracking-tighter">
-              <span className="text-white">DEV</span>
-              <span className="text-gray-400">PORTFOLIO</span>
+              <LogoSvg/>
             </div>
           </div>
           <div className="flex gap-8 mb-6 md:mb-0">
@@ -25,7 +26,7 @@ export const Footer = () => {
         </div>
         <div className="border-t border-zinc-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-500 text-sm">
-            © {currentYear} Developer Portfolio. All rights reserved.
+            © {currentYear} Americo Roca. All rights reserved.
           </div>
           <div className="mt-4 md:mt-0 text-gray-500 text-sm">
             Designed & Built with ♥ and Three.js
