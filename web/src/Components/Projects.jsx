@@ -1,53 +1,52 @@
-import React from 'react'
-import { ExternalLinkIcon, GithubIcon } from 'lucide-react'
+import React from "react";
+import { ExternalLinkIcon, GithubIcon } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
-      title: 'Statics Websites',
+      title: "Statics Websites",
       description:
-        'A personal portfolio showcasing my work with interactive 3D elements using Three.js and React.',
+        "Professional and elegant websites. Ideal for businesses or individuals looking for a modern, informative, and easy-to-navigate online presence.",
       image:
-        'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80',
-      tags: ['React', 'Three.js', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: '#',
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
+      tags: ["Responsive Design", "SEO Optimized", "Fast Loading", "User-Friendly", "Custom Layouts"],
     },
     {
-      title: '3D Websites',
+      title: "3D Websites",
       description:
-        'A personal portfolio showcasing my work with interactive 3D elements using Three.js and React.',
+        "Immersive and interactive websites with 3D elements, designed to captivate users and provide a unique browsing experience. Perfect for creative portfolios, events, or tech-driven brands.",
       image:
-        'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80',
-      tags: ['React', 'Three.js', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: '#',
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
+      tags: ["3D Experience", "Interactive", "Responsive", "Creative Design", "Brand Identity"]
+      ,
+      liveUrl: "#"
     },
     {
-      title: 'E-commerce',
+      title: "E-commerce",
       description:
-        'A comprehensive admin dashboard for managing products, orders, and customers with real-time analytics.',
+       "Online stores, featuring secure payments, product management, and a smooth shopping experience across all devices.",
       image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80',
-      tags: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
-      liveUrl: '#',
-      githubUrl: '#',
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      tags: ["Secure Payments", "Product Management", "Mobile-Friendly", "SEO Ready", "Fast Performance"]
+      ,
     },
     {
-      title: 'Custom Web Application',
+      title: "Custom Web Application",
       description:
-        'A tool that leverages machine learning to generate high-quality content for various purposes.',
+        "Custom-built web applications tailored to your specific business needs. From dashboards to internal tools, these apps are designed to improve workflow, automate processes, and deliver real value.",
       image:
-        'https://images.unsplash.com/photo-1677442135136-760c813030c6?w=800&auto=format&fit=crop&q=80',
-      tags: ['TypeScript', 'OpenAI API', 'Express'],
-      liveUrl: '#',
-      githubUrl: '#',
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      tags: ["Tailored Functionality", "Automation", "Scalable", "Secure", "User-Centric Design"]
+      ,
+      liveUrl: "#",
     },
-  ]
+  ];
+
+  
   return (
     <section id="projects" className="!py-20 bg-black w-full">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">
             Featured Projects
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -84,22 +83,26 @@ export const Projects = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a
-                    href={project.liveUrl}
-                    className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLinkIcon size={16} /> Live Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GithubIcon size={16} /> Source Code
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLinkIcon size={16} /> Live Demo
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <GithubIcon size={16} /> Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -115,5 +118,5 @@ export const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

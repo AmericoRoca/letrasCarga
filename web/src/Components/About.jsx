@@ -6,7 +6,7 @@ export const About = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">About Me</h2>
+            <h2 className="!text-3xl md:text-5xl !font-bold !mb-6">About Me</h2>
             <p className="text-gray-300 mb-6 text-lg">
               I am a passionate Fullstack Developer with hands-on experience in
               creating dynamic, high-performance web applications using

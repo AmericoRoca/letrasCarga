@@ -56,7 +56,7 @@ export const Skills = () => {
     <section id="skills" className="!py-20 bg-zinc-900 w-full">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">
             Technical Skills
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">

@@ -14,7 +14,7 @@ export const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 z-10 relative">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+          <h1 className="!text-4xl !md:text-6xl !lg:text-7xl !font-bold !mb-6 !tracking-tight">
             <span className="block">Creative Developer</span>
             <span className="block mt-2 bg-gradient-to-r from-gray-200 to-gray-400 bg-clip-text text-transparent">
               Building Digital Experiences
