@@ -53,7 +53,7 @@ export const Skills = () => {
     },
   ]
   return (
-    <section id="skills" className="py-20 bg-zinc-900 w-full">
+    <section id="skills" className="!py-20 bg-zinc-900 w-full">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">

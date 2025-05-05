@@ -2,7 +2,7 @@ import React from "react";
 import { BriefcaseIcon, GraduationCapIcon, AwardIcon } from "lucide-react";
 export const About = () => {
   return (
-    <section id="about" className="py-20 bg-zinc-900 w-full">
+    <section id="about" className="!py-20 bg-zinc-900 w-full">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
