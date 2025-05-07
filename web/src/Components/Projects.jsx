@@ -1,5 +1,11 @@
 import React from "react";
-import { ExternalLinkIcon, GithubIcon } from "lucide-react";
+import { ExternalLinkIcon } from "lucide-react";
+import { StaticWebsites } from "../Components/PagesProjects/StaticWebsites";
+import { TresDWeb } from "../Components/PagesProjects/TresDWeb";
+import { ECommerce } from "../Components/PagesProjects/ECommerce";
+import { CustomWebApp } from "../Components/PagesProjects/CustomWebApp";
+import { Link } from "react-router-dom";
+
 export const Projects = () => {
   const projects = [
     {
@@ -8,7 +14,15 @@ export const Projects = () => {
         "Professional and elegant websites. Ideal for businesses or individuals looking for a modern, informative, and easy-to-navigate online presence.",
       image:
         "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
-      tags: ["Responsive Design", "SEO Optimized", "Fast Loading", "User-Friendly", "Custom Layouts"],
+      tags: [
+        "Responsive Design",
+        "SEO Optimized",
+        "Fast Loading",
+        "User-Friendly",
+        "Custom Layouts",
+      ],
+      path: "/projects/static-websites",
+      component: StaticWebsites,
     },
     {
       title: "3D Websites",
@@ -16,18 +30,31 @@ export const Projects = () => {
         "Immersive and interactive websites with 3D elements, designed to captivate users and provide a unique browsing experience. Perfect for creative portfolios, events, or tech-driven brands.",
       image:
         "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
-      tags: ["3D Experience", "Interactive", "Responsive", "Creative Design", "Brand Identity"]
-      ,
-      liveUrl: "#"
+      tags: [
+        "3D Experience",
+        "Interactive",
+        "Responsive",
+        "Creative Design",
+        "Brand Identity",
+      ],
+      path: "/projects/3d-web",
+      component: TresDWeb,
     },
     {
       title: "E-commerce",
       description:
-       "Online stores, featuring secure payments, product management, and a smooth shopping experience across all devices.",
+        "Online stores, featuring secure payments, product management, and a smooth shopping experience across all devices.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-      tags: ["Secure Payments", "Product Management", "Mobile-Friendly", "SEO Ready", "Fast Performance"]
-      ,
+      tags: [
+        "Secure Payments",
+        "Product Management",
+        "Mobile-Friendly",
+        "SEO Ready",
+        "Fast Performance",
+      ],
+      path: "/projects/ecommerce",
+      component: ECommerce,
     },
     {
       title: "Custom Web Application",
@@ -35,13 +62,18 @@ export const Projects = () => {
         "Custom-built web applications tailored to your specific business needs. From dashboards to internal tools, these apps are designed to improve workflow, automate processes, and deliver real value.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-      tags: ["Tailored Functionality", "Automation", "Scalable", "Secure", "User-Centric Design"]
-      ,
-      liveUrl: "#",
+      tags: [
+        "Tailored Functionality",
+        "Automation",
+        "Scalable",
+        "Secure",
+        "User-Centric Design",
+      ],
+      path: "/projects/custom-web-app",
+      component: CustomWebApp,
     },
   ];
 
-  
   return (
     <section id="projects" className="!py-20 bg-black w-full">
       <div className="container mx-auto px-6">
@@ -104,17 +136,18 @@ export const Projects = () => {
                     </a>
                   )}
                 </div>
+
+                <div className="mt-12 text-center !py-4">
+                  <Link
+                    to={project.path}
+                    className="!px-10 !py-3 border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors inline-flex"
+                  >
+                    See more
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <a
-            href="#"
-            className="!px-10 py-3 border border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors inline-flex"
-          >
-            View All Projects
-          </a>
         </div>
       </div>
     </section>
