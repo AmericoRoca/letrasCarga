@@ -1,43 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
-import {NavbarDos} from "./NavbarDos"
-import {FooterDos} from "./FooterDos"
+import { NavbarDos } from "./NavbarDos";
+import { FooterDos } from "./FooterDos";
+import ComingSoon from "../../assets/ComingSoon/ComingSoon.svg";
 
 export const ECommerce = () => {
   const categories = [
     {
-      id: "web-development",
-      title: "Web Development",
-      description: "Full-stack web applications and interactive experiences",
-      image:
-        "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&auto=format&fit=crop&q=80",
-      count: 6,
+      id: "cooming-soon-1",
+      title: "Cooming Soon1",
+      description: "Cooming Soon",
+      image: ComingSoon,
+      liveUrl: "/",
     },
     {
-      id: "mobile-apps",
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile applications",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=80",
-      count: 4,
+      id: "cooming-soon-2",
+      title: "Cooming Soon2",
+      description: "Cooming Soon",
+      image: ComingSoon,
+      liveUrl: "/",
     },
     {
-      id: "interactive-3d",
-      title: "Interactive 3D",
-      description: "Three.js powered 3D web experiences and visualizations",
-      image:
-        "https://images.unsplash.com/photo-1633899306328-c5e70574aff5?w=800&auto=format&fit=crop&q=80",
-      count: 3,
+      id: "cooming-soon-3",
+      title: "Cooming Soon3",
+      description: "Cooming Soon",
+      image: ComingSoon,
+      liveUrl: "/",
     },
     {
-      id: "ai-projects",
-      title: "AI & Machine Learning",
-      description:
-        "Projects leveraging artificial intelligence and machine learning",
-      image:
-        "https://images.unsplash.com/photo-1677442135136-760c813030c6?w=800&auto=format&fit=crop&q=80",
-      count: 5,
+      id: "cooming-soon-4",
+      title: "Cooming Soon4",
+      description: "Cooming Soon",
+      image: ComingSoon,
+      liveUrl: "/",
     },
   ];
   return (
@@ -52,9 +48,7 @@ export const ECommerce = () => {
                 E-Commerce
               </h1>
               <p className="!text-gray-400 !text-xl">
-                Explore my collection of projects across different domains and
-                technologies, showcasing innovative solutions and technical
-                expertise.
+              Discover a selection of custom e-commerce solutions designed to combine performance, usability, and modern design. This section features examples of online stores built with scalability and user experience in mind, integrating technologies like Shopify, WooCommerce, Stripe, and custom checkout flows. Each project is tailored to meet specific business needs, focusing on conversion, responsiveness, and seamless integration with third-party services.
               </p>
             </div>
           </div>
@@ -66,33 +60,32 @@ export const ECommerce = () => {
               {categories.map((category) => (
                 <Link
                   key={category.id}
-                  to={`/projects/${category.id}`}
+                  to={category.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-lg border border-zinc-800 hover:border-white/30 transition-all duration-300"
                 >
-                  <div className="aspect-[16/9] overflow-hidden">
+                  <div className="aspect-[16/9] overflow-hidden relative">
                     <img
                       src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t !from-black/90 !via-black/60 to-transparent">
-                    <div className="absolute bottom-0 p-6 w-full">
-                      <div className="flex justify-between items-end">
+                    <div className="!absolute !bottom-0 !p-6 !w-full">
+                      <div className="!flex !justify-between !items-end">
                         <div>
-                          <h2 className="text-2xl font-bold mb-2">
+                          <h2 className="!text-2xl !font-bold !mb-2">
                             {category.title}
                           </h2>
-                          <p className="text-gray-400 mb-4">
+                          <p className="!text-gray-400 !mb-4">
                             {category.description}
                           </p>
-                          <div className="text-sm text-gray-500">
-                            {category.count} Projects
-                          </div>
                         </div>
                         <ArrowRightIcon
                           size={24}
-                          className="text-white opacity-50 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+                          className="!text-white !opacity-50 !group-hover:opacity-100 !transform !group-hover:translate-x-1 !transition-all"
                         />
                       </div>
                     </div>

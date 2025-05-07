@@ -61,8 +61,7 @@ export const About = () => {
                 <div>
                   <h3 className="text-lg font-semibold">Achievements</h3>
                   <p className="text-gray-400">
-                    Open Source Contributor, Hackathon Winner, Tech Community
-                    Speaker
+                  Successfully delivered multiple client and personal projects, ranging from e-commerce platforms to custom web apps, using technologies like React, Laravel, and Three.js.
                   </p>
                 </div>
               </div>

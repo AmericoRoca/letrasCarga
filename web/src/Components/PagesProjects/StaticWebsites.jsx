@@ -3,32 +3,40 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
 import { NavbarDos } from "./NavbarDos";
 import { FooterDos } from "./FooterDos";
-import { ExternalLinkIcon, GithubIcon } from "lucide-react";
+import ComingSoon from "../../assets/ComingSoon/ComingSoon.svg";
+import TeresaWebsite from "../../assets/img/teresa-website.png";
+import CaravaningWebsite from "../../assets/img/caravaning.jpg";
+import Check from "../../assets/img/check.png";
 
 export const StaticWebsites = () => {
   const categories = [
     {
-      id: "web-development",
+      id: "teresa-hernandez-psicologia",
       title: "Teresa Hernandez Psicología",
-      description: "Full-stack web applications and interactive experiences",
-      image: "",
+      description: "Professional website for psychological consultation",
+      image: TeresaWebsite,
       liveUrl: "https://teresahernandezpsicologia.es",
     },
     {
-      id: "mobile-apps",
-      title: "Caravaning Gan",
-      description: "Native and cross-platform mobile applications",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=80",
+      id: "caravaning-gan",
+      title: "Caravaning-Gan",
+      description: "Cooming Soon",
+      image: CaravaningWebsite,
       liveUrl: "https://caravaning-gan.es",
     },
     {
-      id: "interactive-3d",
+      id: "caravaning-check",
       title: "Caravaning Check",
-      description: "Three.js powered 3D web experiences and visualizations",
-      image:
-        "https://images.unsplash.com/photo-1633899306328-c5e70574aff5?w=800&auto=format&fit=crop&q=80",
-      liveUrl: "https://caravaningcheck.es",
+      description: "Cooming Soon",
+      image: Check,
+      liveUrl: "https://caravaning-check.es",
+    },
+    {
+      id: "cooming-soon-4",
+      title: "Cooming Soon4",
+      description: "Cooming Soon",
+      image: ComingSoon,
+      liveUrl: "/",
     },
   ];
   return (
@@ -43,12 +51,11 @@ export const StaticWebsites = () => {
                 Static Websites
               </h1>
               <p className="!text-gray-400 !text-xl">
-                This section showcases a selection of static websites I’ve
-                built. These projects are optimized for performance, clean
-                design, and fast loading — perfect for portfolios, informational
-                pages, or small businesses. Each site highlights attention to
-                detail, semantic structure, and responsive design to ensure a
-                smooth user experience across all devices.
+              Perfect for businesses and individuals looking for a simple, fast, and effective online presence.
+
+Static websites are ideal for those who need a clean, straightforward website without the complexity of constant updates or dynamic content. Whether you're a small business, a freelancer, or an individual wanting to showcase your portfolio, static websites provide a fast and reliable solution for your digital presence.
+
+They are designed to be lightweight, easy to maintain, and deliver a seamless user experience. If you're looking for a professional yet simple website that gets the job done, static websites are the way to go.
               </p>
             </div>
           </div>
@@ -65,29 +72,28 @@ export const StaticWebsites = () => {
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-lg border border-zinc-800 hover:border-white/30 transition-all duration-300"
                 >
-                  <div className="aspect-[16/9] overflow-hidden">
+                  <div className="aspect-[16/9] overflow-hidden relative">
                     <img
                       src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="!w-full !h-full object-contain group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t !from-black/90 !via-black/60 to-transparent">
-                    <div className="absolute bottom-0 p-6 w-full">
-                      <div className="flex justify-between items-end">
+                    <div className="!absolute !bottom-0 !p-6 !w-full">
+                      <div className="!flex !justify-between !items-end">
                         <div>
-                          <h2 className="text-2xl font-bold mb-2">
+                          <h2 className="!text-2xl !font-bold !mb-2">
                             {category.title}
                           </h2>
-                          <p className="text-gray-400 mb-4">
+                          <p className="!text-gray-400 !mb-4">
                             {category.description}
                           </p>
-                          <div className="flex gap-3">
-                            <span>
-                              <ExternalLinkIcon size={16} /> Live
-                            </span>
-                          </div>
                         </div>
+                        <ArrowRightIcon
+                          size={24}
+                          className="!text-white !opacity-50 !group-hover:opacity-100 !transform !group-hover:translate-x-1 !transition-all"
+                        />
                       </div>
                     </div>
                   </div>
