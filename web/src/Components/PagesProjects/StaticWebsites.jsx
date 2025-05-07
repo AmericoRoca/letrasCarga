@@ -29,7 +29,7 @@ export const StaticWebsites = () => {
       title: "Caravaning Check",
       description: "Cooming Soon",
       image: Check,
-      liveUrl: "https://caravaning-check.es",
+      liveUrl: "https://caravaningcheck.es",
     },
     {
       id: "cooming-soon-4",
