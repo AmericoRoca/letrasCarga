@@ -6,6 +6,7 @@ import { FooterDos } from "./FooterDos";
 import ComingSoon from "../../assets/ComingSoon/ComingSoon.svg";
 import TeresaWebsite from "../../assets/img/teresa-website.png";
 import CaravaningWebsite from "../../assets/img/caravaning.jpg";
+import CaravaningGan from "../../assets/img/caravaning-gan.png";
 import Check from "../../assets/img/check.png";
 
 export const StaticWebsites = () => {
@@ -20,14 +21,14 @@ export const StaticWebsites = () => {
     {
       id: "caravaning-gan",
       title: "Caravaning-Gan",
-      description: "Cooming Soon",
-      image: CaravaningWebsite,
+      description: "Caravan workshop website",
+      image: CaravaningGan,
       liveUrl: "https://caravaning-gan.es",
     },
     {
       id: "caravaning-check",
       title: "Caravaning Check",
-      description: "Cooming Soon",
+      description: "Professional motorhome reviewer website",
       image: Check,
       liveUrl: "https://caravaningcheck.es",
     },
