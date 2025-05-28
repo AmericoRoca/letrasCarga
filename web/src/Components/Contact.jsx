@@ -1,21 +1,62 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { MailIcon, PhoneIcon, MapPinIcon, SendIcon } from "lucide-react";
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const Contact = () => {
-
   const socialLinks = {
     github: "https://github.com/AmericoRoca",
     linkedin: "https://www.linkedin.com/in/americoroca/?locale=en_US",
-    threads: "https://www.threads.net/@americo.roca", // Threads usa .net, no .com
   };
 
+  const SITE_KEY = "6Lfxx0wrAAAAALxvV0UDxBBob9sK76pfXjGI8BBm";
 
+  const form = useRef();
+  const recaptchaRef = useRef(null);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const token = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset();
+
+      if (!token) {
+        setError("Please verify reCAPTCHA");
+        setSending(false);
+        return;
+      }
+
+      await emailjs.sendForm(
+        "service_rwryy9g", // reemplaza con tu Service ID de EmailJS
+        "template_t92omfk", // reemplaza con tu Template ID
+        form.current,
+        "k3dU6E1XfxdArftZV" // reemplaza con tu User/Public Key
+      );
+
+      setSuccess(true);
+      form.current.reset();
+    } catch (err) {
+      console.error(err);
+      setError("Error sending message. Please try again later.");
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <section id="contact" className="!py-20 bg-black w-full">
       <div className="container mx-auto px-6">
         <div className="mb-16 text-center !py-8">
-          <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">Get In Touch</h2>
+          <h2 className="!text-3xl !md:text-5xl !font-bold !mb-4">
+            Get In Touch
+          </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach
             out and let's create something amazing together.
@@ -31,10 +72,10 @@ export const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold">Email</h3>
                   <a
-                    href="mailto:hello@example.com"
+                    href="mailto:americochiclana@gmail.com"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    americoroca@code.com
+                    americochiclana@gmail.com
                   </a>
                 </div>
               </div>
@@ -65,7 +106,7 @@ export const Contact = () => {
             <div className="mt-12">
               <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
-                {["github", "linkedin", "threads"].map((platform) => (
+                {["github", "linkedin"].map((platform) => (
                   <a
                     key={platform}
                     href={socialLinks[platform]}
@@ -85,7 +126,7 @@ export const Contact = () => {
             </div>
           </div>
           <div>
-            <form className="space-y-4">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -96,7 +137,9 @@ export const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     id="name"
+                    required
                     className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
                     placeholder="Your name"
                   />
@@ -110,7 +153,9 @@ export const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     id="email"
+                    required
                     className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
                     placeholder="Your email"
                   />
@@ -125,7 +170,9 @@ export const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="subject"
                   id="subject"
+                  required
                   className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white"
                   placeholder="Subject"
                 />
@@ -138,18 +185,33 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   id="message"
                   rows={5}
+                  required
                   className="w-full p-3 bg-zinc-900 border border-zinc-800 rounded-md focus:outline-none focus:border-white text-white resize-none"
                   placeholder="Your message"
                 ></textarea>
               </div>
               <button
                 type="submit"
+                disabled={sending}
                 className="!px-8 py-3 bg-white text-black font-medium !rounded-md hover:bg-gray-200 transition-colors flex items-center gap-2"
               >
-                Send Message <SendIcon size={16} />
+                {sending ? "Sending..." : "Send Message"} <SendIcon size={16} />
               </button>
+
+              <ReCAPTCHA
+                sitekey={SITE_KEY}
+                size="invisible"
+                ref={recaptchaRef}
+                badge="bottomright"
+              />
+
+              {error && <p className="text-red-500">{error}</p>}
+              {success && (
+                <p className="text-green-500">Message sent successfully!</p>
+              )}
             </form>
           </div>
         </div>
