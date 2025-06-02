@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MenuIcon, XIcon } from 'lucide-react'
 import Logo from "../logo/logo"
+import "./Navbar.css"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +38,7 @@ export const Navbar = () => {
           ))}
         </div>
         {/* Mobile Navigation Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden toggle-margin">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
           </button>

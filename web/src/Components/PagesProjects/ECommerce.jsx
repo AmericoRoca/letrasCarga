@@ -9,7 +9,7 @@ export const ECommerce = () => {
   const categories = [
     {
       id: "cooming-soon-1",
-      title: "Cooming Soon1",
+      title: "MiauWood",
       description: "Cooming Soon",
       image: ComingSoon,
       liveUrl: "/",

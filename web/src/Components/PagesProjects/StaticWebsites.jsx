@@ -34,7 +34,7 @@ export const StaticWebsites = () => {
     },
     {
       id: "cooming-soon-4",
-      title: "Cooming Soon4",
+      title: "Te ayudo",
       description: "Cooming Soon",
       image: ComingSoon,
       liveUrl: "/",

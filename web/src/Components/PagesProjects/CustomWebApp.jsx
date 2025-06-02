@@ -9,14 +9,14 @@ export const CustomWebApp = () => {
   const categories = [
     {
       id: "cooming-soon-1",
-      title: "Cooming Soon1",
+      title: "Social Media Lav",
       description: "Cooming Soon",
       image: ComingSoon,
       liveUrl: "/",
     },
     {
       id: "cooming-soon-2",
-      title: "Cooming Soon2",
+      title: "CookHub",
       description: "Cooming Soon",
       image: ComingSoon,
       liveUrl: "/",

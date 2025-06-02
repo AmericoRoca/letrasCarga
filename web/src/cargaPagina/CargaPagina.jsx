@@ -6,9 +6,19 @@ const CargaPagina = ({ isReady, onComplete }) => {
   const svgRef = useRef(null);
   const [isAnimating, setIsAnimating] = useState(true);
 
+  // Bloquea scroll al montar el componente
+  useEffect(() => {
+    // Desactivar scroll
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      // Reactivar scroll cuando el componente se desmonte (por si acaso)
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   // Función para animar el SVG
   const runSvgAnimation = () => {
-
     const paths = svgRef.current.querySelectorAll("path, polygon");
     let tl = gsap.timeline({
       repeat: -1, // Repite indefinidamente hasta que la página esté lista
@@ -30,8 +40,7 @@ const CargaPagina = ({ isReady, onComplete }) => {
     tl.to(paths, { fill: "#ffffff", duration: 1 }, "+=0.5");
     tl.to(paths, { opacity: 1 }, "+=0.5");
 
-    tl.to("#inicio-carga", {opacity:0,duration: 0.3, delay: 0.8})
-
+    tl.to("#inicio-carga", {opacity:0,duration: 0.3, delay: 0.8});
   };
 
   // Efecto al montar el componente
@@ -49,10 +58,12 @@ const CargaPagina = ({ isReady, onComplete }) => {
         onComplete: () => {
           setIsAnimating(false);
           onComplete(); // Notifica que la carga ha terminado
+          // Reactivar scroll cuando termina la animación
+          document.body.style.overflow = "";
         },
       });
     }
-  }, [isReady]);
+  }, [isReady, onComplete]);
 
   if (!isAnimating) return null; // Elimina el componente cuando termina la animación
 

@@ -9,7 +9,7 @@ export const TresDWeb = () => {
   const categories = [
     {
       id: "cooming-soon-1",
-      title: "Cooming Soon1",
+      title: "Tata Atelier",
       description: "Cooming Soon",
       image: ComingSoon,
       liveUrl: "/",
@@ -82,7 +82,7 @@ export const TresDWeb = () => {
                     <div className="!absolute !bottom-0 !p-6 !w-full">
                       <div className="!flex !justify-between !items-end">
                         <div>
-                          <h2 className="!text-2xl !font-bold !mb-2">
+                          <h2 className="!text-gray-2xl !font-bold !mb-2">
                             {category.title}
                           </h2>
                           <p className="!text-gray-400 !mb-4">

@@ -5,6 +5,12 @@ import { TresDWeb } from "../Components/PagesProjects/TresDWeb";
 import { ECommerce } from "../Components/PagesProjects/ECommerce";
 import { CustomWebApp } from "../Components/PagesProjects/CustomWebApp";
 import { Link } from "react-router-dom";
+import "./Projects.css";
+
+import tresd from "../assets/img/3d.jpg";
+import webstatic from "../assets/img/webstatic.jpg";
+import ecom from "../assets/img/ecom.jpg";
+import custom from "../assets/img/custom.jpg";
 
 export const Projects = () => {
   const projects = [
@@ -12,8 +18,7 @@ export const Projects = () => {
       title: "Statics Websites",
       description:
         "Professional and elegant websites. Ideal for businesses or individuals looking for a modern, informative, and easy-to-navigate online presence.",
-      image:
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
+      image: webstatic,
       tags: [
         "Responsive Design",
         "SEO Optimized",
@@ -28,8 +33,7 @@ export const Projects = () => {
       title: "3D Websites",
       description:
         "Immersive and interactive websites with 3D elements, designed to captivate users and provide a unique browsing experience. Perfect for creative portfolios, events, or tech-driven brands.",
-      image:
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&auto=format&fit=crop&q=80",
+      image: tresd,
       tags: [
         "3D Experience",
         "Interactive",
@@ -44,8 +48,7 @@ export const Projects = () => {
       title: "E-commerce",
       description:
         "Online stores, featuring secure payments, product management, and a smooth shopping experience across all devices.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      image: ecom,
       tags: [
         "Secure Payments",
         "Product Management",
@@ -60,8 +63,7 @@ export const Projects = () => {
       title: "Custom Web Application",
       description:
         "Custom-built web applications tailored to your specific business needs. From dashboards to internal tools, these apps are designed to improve workflow, automate processes, and deliver real value.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      image: custom,
       tags: [
         "Tailored Functionality",
         "Automation",
@@ -96,7 +98,9 @@ export const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-full object-cover hover:scale-105 transition-transform duration-500 ${
+                    project.title === "3D Websites" ? "translate-up" : ""
+                  } ${project.title === "E-commerce" ? "translate-up2" : ""}`}
                 />
               </div>
               <div className="!p-6 flex flex-col flex-grow">
